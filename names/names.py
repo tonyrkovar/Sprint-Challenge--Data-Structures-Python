@@ -22,6 +22,12 @@ end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")
 
+
+"""
+This problem as it is written is O(n^2). Because we're going to be iterating over two separate files and when we iterate over the first one, we're comparing every single element in the second file against a single element in the first.
+Since you are comparing the second list to every single element in the first you're going to be iterating list1 * list2 incredibly inefficiently.
+"""
+
 # ---------- Stretch Goal -----------
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
